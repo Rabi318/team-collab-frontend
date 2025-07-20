@@ -174,3 +174,29 @@ Utility functions to interact with backend APIs:
 - ⛓️ **Task Dependencies** – Support subtasks, dependencies, and recurring tasks.
 - 🟢 **User Status Indicators** – Show online/offline presence in chat.
 - 🧪 **Unit & Integration Testing** – Add tests for components and application logic.
+
+## Images
+
+### Home
+
+![Landing Page](public/images/landingpage.png)
+
+### Banner
+
+![Banner](public/images/banner.png)
+
+### Dashboard
+
+![Dashboard](public/images/dashboard.png)
+
+### Task
+
+![Task](public/images/task.png)
+
+### Chat
+
+![Chat](public/images/chat.png)
+
+### Profile
+
+![Profile](public/images/profile.png)
