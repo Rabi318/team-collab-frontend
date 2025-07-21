@@ -4,6 +4,20 @@ This is the frontend repository for a collaborative workspace application, desig
 
 ---
 
+## Deployed Link
+
+🔗 [Live Frontend App](https://euphonious-duckanoo-508032.netlify.app)
+
+### 🚀 Demo Credentials
+
+**Admin Account**  
+📧 Email: `adi@gmail.com`  
+🔐 Password: `123456`
+
+**User Account**
+📧 Email: `rabi@gmail.com`  
+🔐 Password: `1234567`
+
 ## ✨ Features
 
 ### 🔐 User Interface & Authentication
