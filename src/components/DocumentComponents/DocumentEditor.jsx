@@ -5,7 +5,7 @@ import { socket } from "../../services/socket.js";
 import { useDocument } from "../../context/DocumentContext.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 import axios from "axios";
-import debounce from "lodash/debounce";
+import debounce from "../../services/utils.js";
 
 const TOOLBAR_OPTIONS = [
   ["bold", "italic", "underline", "strike"],
