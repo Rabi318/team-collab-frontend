@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import Quill from "quill";
+// import Quill from "quill";
 import "quill/dist/quill.snow.css";
 import { socket } from "../../services/socket.js";
 import { useDocument } from "../../context/DocumentContext.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 import axios from "axios";
-import { debounce } from "lodash";
+import debounce from "lodash/debounce";
 
 const TOOLBAR_OPTIONS = [
   ["bold", "italic", "underline", "strike"],
@@ -23,13 +23,20 @@ export default function DocumentEditor({ docId, token }) {
   }, 1000);
 
   useEffect(() => {
-    const quill = new Quill(editorRef.current, {
-      theme: "snow",
-      modules: {
-        toolbar: TOOLBAR_OPTIONS,
-      },
+    let quill;
+    // const quill = new Quill(editorRef.current, {
+    //   theme: "snow",
+    //   modules: {
+    //     toolbar: TOOLBAR_OPTIONS,
+    //   },
+    // });
+    import("quill").then(({ default: Quill }) => {
+      quill = new Quill(editorRef.current, {
+        theme: "snow",
+        modules: { toolbar: TOOLBAR_OPTIONS },
+      });
+      quill.setText("Loading...");
     });
-    quill.setText("Loading...");
     socket.auth = { token };
     socket.connect();
 
